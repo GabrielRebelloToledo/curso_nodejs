@@ -1,21 +1,15 @@
-var dbConnection = require('../../config/db.connection');
+module.exports = function(app) {
 
-
-module.exports = function(app){
-var connection = dbConnection();
-
-
-//local, função de callback
-app.get('/noticias1', function(req, res){
-    
-connection.query('select * from noticias',function(error, result){
-         res.render("noticias/noticia",{noticias:result});
-        console.log(error);
+    //local, função de callback
+    app.get('/noticias', function(req, res) {
+        app.app.controllers.noticias.noticias(app, req, res);
     });
-});
 
-/* //local, função de callback
-app.get('/noticias2', function(req, res){
-    res.render("noticias/noticias") 
-});  */
+    //local, função de callback
+    app.get('/noticia', function(req, res) {
+
+        app.app.controllers.noticias.noticia_descricao(app, req, res);
+    });
+
+
 }

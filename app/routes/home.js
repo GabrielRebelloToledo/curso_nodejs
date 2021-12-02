@@ -1,8 +1,8 @@
-module.exports = function(app){
+module.exports = function(app) {
 
- //local, função de callback
- app.get('/', function(req, res){
-    res.render("home/index")
-});
- 
- }
+    //local, função de callback
+    app.get('/', function(req, res) {
+        app.app.controllers.home.home(app, req, res);
+    });
+
+}
