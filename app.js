@@ -9,5 +9,5 @@ var rotanoticias = require('./app/routes/noticias')(app); */
 
 
 app.listen(21244, function() {
-    console.log("Ouvindo na porta 3000")
+    console.log("Ouvindo na porta 21244")
 });
