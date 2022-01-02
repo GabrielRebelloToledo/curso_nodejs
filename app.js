@@ -8,6 +8,6 @@ var rotanoticias = require('./app/routes/noticias')(app); */
 
 
 
-app.listen(3000, function() {
+app.listen(21244, function() {
     console.log("Ouvindo na porta 3000")
 });
